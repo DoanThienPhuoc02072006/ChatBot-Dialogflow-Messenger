@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cổng Hỗ Trợ Sinh Viên</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background: #fff;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #4facfe;
+    }
+
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #666;
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #4facfe;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #555;
+    }
+    /* Chọn các div trực tiếp bên trong section footer-images */
+    .footer-images div {
+        display: flex;          /* Kích hoạt chế độ dàn hàng ngang */
+        justify-content: center; /* Căn giữa các ảnh (tùy chọn) */
+        gap: 10px;              /* Tạo khoảng cách giữa các ảnh */
+        margin-bottom: 20px;    /* Khoảng cách giữa dòng trên và dòng dưới */
+    }
+
+    /* Đảm bảo ảnh không quá to làm vỡ khung */
+    .footer-images img {
+        max-width: 30%;         /* Chia đều không gian cho 3 ảnh */
+        height: auto;           /* Giữ tỉ lệ ảnh */
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: white;
+      margin-top: 40px;
+    }
+
+    .chatbot {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+  </style>
+
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>ĐỒ ÁN CUỐI KỲ "CHATBOT DIALOGFLOW MESSENGER" -  NHÓM 10</h1> <br>
+    <h1>TRUNG TÂM ĐÀO TẠO TÍN CHỈ TIẾNG ANH</h1> <br>
+    <p>Trợ lý ảo hỗ trợ học tập 24/7</p>
+  </header>
+
+  <nav>
+    <a href="#">Trang chủ</a>
+    <a href="#">Môn học</a>
+    <a href="#">Lịch học</a>
+    <a href="#">Liên hệ</a>
+  </nav>
+
+  <section class="hero">
+    <h1>Chào mừng các bạn sinh viên</h1>
+    <p>Hãy đặt câu hỏi cho chatbot ở góc phải màn hình</p>
+  </section>
+
+  <section class="container">
+    <div class="grid">
+      <div class="card">
+        <h3>Đăng ký môn học</h3>
+        <p>Hướng dẫn đăng ký môn học nhanh chóng và dễ dàng.</p>
+      </div>
+
+      <div class="card">
+        <h3>Lịch thi</h3>
+        <p>Xem lịch thi và các mốc thời gian quan trọng.</p>
+      </div>
+
+      <div class="card">
+        <h3>Học phí</h3>
+        <p>Thông tin về học phí và phương thức thanh toán.</p>
+      </div>
+
+      <div class="card">
+        <h3>Hỗ trợ sinh viên</h3>
+        <p>Chatbot hỗ trợ bạn mọi lúc, mọi nơi.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="footer-images">
+    <div>
+        <img src="Hinh01.jpg" alt="img1">
+        <img src="Hinh02.webp" alt="img2">
+        <img src="Hinh03.jpg" alt="img3">
+    </div>
+      <div>
+        <img src="Hinh04.jpg" alt="img4">
+        <img src="Hinh05.webp" alt="img5">
+        <img src="Hinh07.jpg" alt="img6">
+      </div>
+  </section>
+    
+  <footer>
+    <p>© 2026 Cổng Sinh Viên | Tích hợp Chatbot</p>
+  </footer>
+
+  <div class="chatbot">
+    <df-messenger
+    chat-title="ChatBot_Dome"
+    agent-id="c3fbbc64-a12e-4aa9-861e-57d9769fb568"
+    language-code="en"
+  ></df-messenger>
+  </div>
+
+</body>
+</html>
